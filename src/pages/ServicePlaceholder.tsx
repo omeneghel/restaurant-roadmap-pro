@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,11 +12,6 @@ interface ServicePlaceholderProps {
 const ServicePlaceholder = ({ title, description, canonical }: ServicePlaceholderProps) => {
   return (
     <>
-      <SEOHead
-        title={`${title} | ECONOMICA`}
-        description={description}
-        canonical={canonical}
-      />
       
       <Header />
       

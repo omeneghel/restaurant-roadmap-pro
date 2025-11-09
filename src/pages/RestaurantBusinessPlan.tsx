@@ -3,7 +3,6 @@ import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
 import ContactForm from "@/components/ContactForm";
-import SEOHead from "@/components/SEOHead";
 import Breadcrumb from "@/components/Breadcrumb";
 import { 
   TrendingUp, 
@@ -23,11 +22,6 @@ import {
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <SEOHead
-        title="Plano de Negócios para Restaurantes | ECONOMICA"
-        description="Plano de Negócios para Restaurantes: uma estratégia sólida desenvolvida pela ECONOMICA para estruturar seu restaurante com eficiência e crescimento sustentável."
-        canonical="https://economicajr.com.br/plano-de-negocios-para-restaurante"
-      />
       <Header />
       <Hero 
         subtitle="Plano de negócios para restaurantes pela ECONOMICA — estratégia, viabilidade e gestão para escalar seu negócio com segurança e previsibilidade"

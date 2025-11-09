@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -7,11 +6,6 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <>
-      <SEOHead
-        title="Sobre Nós | ECONOMICA"
-        description="Conheça a ECONOMICA, empresa júnior do Instituto de Economia da UNICAMP. Conheça nossa história, missão e como aplicamos conhecimento acadêmico para transformar negócios."
-        canonical="https://economicajr.com.br/sobre-nos"
-      />
       
       <Header />
       

@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, BarChart3, TrendingUp, Calculator, Target } from "lucide-react";
@@ -41,11 +40,6 @@ const Services = () => {
 
   return (
     <>
-      <SEOHead
-        title="Serviços de Consultoria Empresarial | ECONOMICA"
-        description="Conheça os serviços de consultoria empresarial da ECONOMICA: Plano de Negócios, Valuation, Pesquisa de Mercado, Precificação e Análise de Viabilidade. Soluções baseadas em conhecimento UNICAMP."
-        canonical="https://economicajr.com.br/servicos"
-      />
       
       <Header />
       

@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -7,11 +6,6 @@ import { Link } from "react-router-dom";
 const CaseStudies = () => {
   return (
     <>
-      <SEOHead
-        title="Cases de Sucesso | ECONOMICA"
-        description="Conheça os cases de sucesso da ECONOMICA e veja como ajudamos empresas a crescer com consultoria estratégica baseada em metodologia UNICAMP."
-        canonical="https://economicajr.com.br/cases-de-sucesso"
-      />
       
       <Header />
       

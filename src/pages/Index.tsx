@@ -1,5 +1,4 @@
 import Header from "@/components/Header";
-import SEOHead from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, BarChart3, TrendingUp, Calculator, Target, Users } from "lucide-react";
@@ -41,11 +40,6 @@ const Index = () => {
 
   return (
     <>
-      <SEOHead
-        title="ECONOMICA | Consultoria Empresarial Unicamp"
-        description="A ECONOMICA direciona empresários a estruturar seus negócios através do conhecimento do maior centro de ensino e pesquisa do país (UNICAMP). Consultoria especializada em plano de negócios, valuation e análise de mercado."
-        canonical="https://economicajr.com.br/"
-      />
       
       <Header />
       
