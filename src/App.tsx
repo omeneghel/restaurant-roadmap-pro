@@ -4,7 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import RestaurantBusinessPlan from "./pages/RestaurantBusinessPlan";
+import BusinessPlan from "./pages/BusinessPlan";
+import BusinessPlanRestaurant from "./pages/BusinessPlanRestaurant";
+import BusinessPlanTemplate from "./pages/BusinessPlanTemplate";
 import Services from "./pages/Services";
 import BusinessPlanService from "./pages/BusinessPlanService";
 import MarketResearchService from "./pages/MarketResearchService";
@@ -24,15 +26,27 @@ const App = () => (
       <Sonner />
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/plano-de-negocios-para-restaurante" element={<RestaurantBusinessPlan />} />
+        
+        {/* Business Plan Routes - New Structure */}
+        <Route path="/plano-de-negocios" element={<BusinessPlan />} />
+        <Route path="/plano-de-negocios/restaurante" element={<BusinessPlanRestaurant />} />
+        <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} />
+        
+        {/* Old Route - Redirect handled by template */}
+        <Route path="/plano-de-negocios-para-restaurante" element={<BusinessPlanRestaurant />} />
+        
+        {/* Services Routes */}
         <Route path="/servicos" element={<Services />} />
         <Route path="/servicos/plano-de-negocios" element={<BusinessPlanService />} />
         <Route path="/servicos/pesquisa-e-analise-de-mercado" element={<MarketResearchService />} />
         <Route path="/servicos/valuation" element={<ValuationService />} />
         <Route path="/servicos/precificacao" element={<PricingService />} />
         <Route path="/servicos/analise-de-viabilidade-do-investimento" element={<InvestmentAnalysisService />} />
+        
+        {/* Other Pages */}
         <Route path="/sobre-nos" element={<About />} />
         <Route path="/cases-de-sucesso" element={<CaseStudies />} />
+        
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

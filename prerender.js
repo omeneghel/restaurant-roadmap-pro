@@ -11,13 +11,19 @@ const { render } = await import('./dist/server/entry-server.js')
 // All routes to prerender for static site generation
 const routesToPrerender = [
   '/',
+  // Business Plan Routes - New Structure
+  '/plano-de-negocios',
+  '/plano-de-negocios/restaurante',
+  // Old route kept for backward compatibility
   '/plano-de-negocios-para-restaurante',
+  // Services
   '/servicos',
   '/servicos/plano-de-negocios',
   '/servicos/pesquisa-e-analise-de-mercado',
   '/servicos/valuation',
   '/servicos/precificacao',
   '/servicos/analise-de-viabilidade-do-investimento',
+  // Other Pages
   '/sobre-nos',
   '/cases-de-sucesso'
 ]

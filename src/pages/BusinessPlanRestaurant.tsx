@@ -4,6 +4,7 @@ import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
 import ContactForm from "@/components/ContactForm";
 import Breadcrumb from "@/components/Breadcrumb";
+import SEOHead from "@/components/SEOHead";
 import { 
   TrendingUp, 
   Target, 
@@ -19,9 +20,15 @@ import {
   CheckCircle2
 } from "lucide-react";
 
-const Index = () => {
+const BusinessPlanRestaurant = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead 
+        title="Plano de Negócios para Restaurante | ECONOMICA"
+        description="Plano de negócios completo para restaurantes pela ECONOMICA - estratégia, viabilidade e gestão para escalar seu restaurante com segurança e previsibilidade."
+        canonical="https://economicajr.com.br/plano-de-negocios/restaurante"
+      />
+      
       <Header />
       <Hero 
         subtitle="<strong>Plano de negócios para restaurantes</strong> pela ECONOMICA — estratégia, viabilidade e gestão para escalar seu negócio com segurança e previsibilidade"
@@ -33,7 +40,8 @@ const Index = () => {
         <Breadcrumb 
           items={[
             { label: "Home", href: "/" },
-            { label: "Plano de Negócios para Restaurantes" }
+            { label: "Plano de Negócios", href: "/plano-de-negocios" },
+            { label: "Restaurante" }
           ]}
         />
         <div className="grid lg:grid-cols-3 gap-8">
@@ -347,4 +355,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default BusinessPlanRestaurant;
