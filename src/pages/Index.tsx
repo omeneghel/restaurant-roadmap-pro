@@ -40,21 +40,21 @@ const Index = () => {
               
               <div className="space-y-6 mt-8">
                 <div>
-                  <h3 className="text-xl font-bold text-secondary mb-3">1.1 Conseguir financiamentos e crédito</h3>
+                  <h3 className="text-xl font-bold text-secondary mb-3">Conseguir financiamentos e crédito</h3>
                   <p className="text-foreground leading-relaxed">
                     Instituições financeiras exigem planos de negócios consistentes para aprovação de empréstimos e financiamentos. Um plano bem estruturado demonstra viabilidade econômica, projeções realistas e gestão de riscos, aumentando significativamente suas chances de captação de recursos para abertura ou expansão do restaurante.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-secondary mb-3">1.2 Expandir com novos sócios</h3>
+                  <h3 className="text-xl font-bold text-secondary mb-3">Expandir com novos sócios</h3>
                   <p className="text-foreground leading-relaxed">
                     Para atrair investidores e sócios estratégicos, é fundamental apresentar uma visão clara do negócio, incluindo análise de mercado, diferenciais competitivos e retorno sobre investimento. O plano de negócios funciona como um documento profissional que transmite confiança e seriedade ao seu empreendimento gastronômico.
                   </p>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-secondary mb-3">1.3 Entender a viabilidade do negócio</h3>
+                  <h3 className="text-xl font-bold text-secondary mb-3">Entender a viabilidade do negócio</h3>
                   <p className="text-foreground leading-relaxed">
                     Antes de investir tempo e recursos, é crucial avaliar se o restaurante será sustentável financeiramente. O plano de negócios permite testar premissas, analisar custos operacionais, ticket médio, capacidade de atendimento e ponto de equilíbrio, evitando decisões impulsivas que podem resultar em prejuízos.
                   </p>
@@ -70,39 +70,39 @@ const Index = () => {
 
               <div className="space-y-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.1 Pesquisa e Análise de Mercado</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Pesquisa e Análise de Mercado</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.1.1 Análise Macroeconômica</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise Macroeconômica</h4>
                       <p className="text-foreground leading-relaxed">
                         Avaliação do cenário econômico brasileiro, incluindo inflação, poder de compra da população, tendências de consumo no setor gastronômico e impacto de políticas públicas. Esses fatores influenciam diretamente a demanda por serviços de alimentação e a precificação dos pratos.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.1.2 Análise do Setor</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise do Setor</h4>
                       <p className="text-foreground leading-relaxed">
                         Estudo aprofundado do mercado de restaurantes, identificando tendências como gastronomia sustentável, delivery, experiências gastronômicas, tipos de culinária em alta e comportamento do consumidor. Análise de sazonalidade e padrões de consumo em diferentes horários e dias da semana.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.1.3 Mapeamento do Público-Alvo</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Mapeamento do Público-Alvo</h4>
                       <p className="text-foreground leading-relaxed">
                         Definição precisa do perfil dos clientes: faixa etária, renda, preferências gastronômicas, frequência de visitas, ticket médio esperado e motivações de consumo. Compreender quem são seus clientes ideais permite criar uma proposta de valor alinhada com suas expectativas.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.1.4 Análise da Concorrência</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise da Concorrência</h4>
                       <p className="text-foreground leading-relaxed">
                         Mapeamento detalhado dos concorrentes diretos e indiretos na região, analisando cardápios, precificação, atendimento, ambiente, diferenciais e reputação. Identificação de lacunas no mercado que seu restaurante pode explorar para se posicionar de forma competitiva.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.1.5 Estudo da Região</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Estudo da Região</h4>
                       <p className="text-foreground leading-relaxed">
                         Análise geográfica e demográfica da localização escolhida, avaliando fluxo de pessoas, densidade populacional, perfil econômico dos moradores, acessibilidade, estacionamento, concorrência próxima e potencial de atração de clientes. A localização é um dos fatores mais críticos para o sucesso de um restaurante.
                       </p>
@@ -111,32 +111,32 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.2 Plano de Marketing</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Plano de Marketing</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.2.1 Análise de Metodologias de Marketing</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise de Metodologias de Marketing</h4>
                       <p className="text-foreground leading-relaxed">
                         Estudo dos 7 P's do marketing aplicados ao setor gastronômico: Produto (cardápio), Preço (estratégia de precificação), Praça (localização e canais), Promoção (divulgação), Pessoas (equipe), Processos (atendimento) e Physical Evidence (ambiente físico). Cada elemento impacta diretamente a percepção de valor do cliente.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.2.2 Estratégias de Marketing</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Estratégias de Marketing</h4>
                       <p className="text-foreground leading-relaxed">
                         Definição de canais de comunicação (redes sociais, site, aplicativos de delivery), estratégias de lançamento, campanhas promocionais, parcerias locais, eventos e degustações. Planejamento de marketing digital focado em engajamento e conversão de seguidores em clientes.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.2.3 Fidelização dos Clientes</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Fidelização dos Clientes</h4>
                       <p className="text-foreground leading-relaxed">
                         Criação de programas de fidelidade, cartões de pontos, promoções exclusivas para clientes recorrentes e estratégias de relacionamento pós-venda. A fidelização é mais econômica que a aquisição de novos clientes e garante receita previsível.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.2.4 Painel de Indicadores do Marketing</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Painel de Indicadores do Marketing</h4>
                       <p className="text-foreground leading-relaxed">
                         Definição de KPIs (indicadores-chave de performance) como CAC (custo de aquisição de cliente), LTV (valor do tempo de vida do cliente), taxa de conversão, engajamento em redes sociais, número de avaliações positivas e retorno sobre investimento em marketing.
                       </p>
@@ -145,46 +145,46 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.3 Plano Operacional</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Plano Operacional</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.1 Espaço Físico</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Espaço Físico</h4>
                       <p className="text-foreground leading-relaxed">
                         Planejamento do layout do restaurante, incluindo cozinha, salão, banheiros, estoque e área de recebimento. Adequação às normas da vigilância sanitária, corpo de bombeiros e acessibilidade. Dimensionamento correto garante eficiência operacional e conforto aos clientes.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.2 Metodologia 5W2H</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Metodologia 5W2H</h4>
                       <p className="text-foreground leading-relaxed">
                         Aplicação da ferramenta 5W2H (What, Why, Where, When, Who, How, How much) para planejamento detalhado de todas as atividades operacionais: cardápio, fornecedores, processos de compra, preparação de alimentos, atendimento ao cliente e gestão de estoque.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.3 Quadro Organizacional</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Quadro Organizacional</h4>
                       <p className="text-foreground leading-relaxed">
                         Definição da estrutura de equipe necessária: chef, cozinheiros, auxiliares de cozinha, garçons, recepcionista, gerente e equipe de limpeza. Descrição de funções, responsabilidades e hierarquia. Planejamento de contratações por fase de crescimento do negócio.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.4 Softwares Úteis</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Softwares Úteis</h4>
                       <p className="text-foreground leading-relaxed">
                         Indicação de sistemas de gestão para restaurantes: PDV (ponto de venda), controle de estoque, gestão financeira, integração com delivery, reservas online e CRM. A tecnologia otimiza processos, reduz erros e melhora a experiência do cliente.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.5 Relacionamento com Cliente</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Relacionamento com Cliente</h4>
                       <p className="text-foreground leading-relaxed">
                         Estabelecimento de protocolos de atendimento, gestão de reclamações, coleta de feedback e canais de comunicação. Um bom relacionamento com o cliente gera recomendações espontâneas e fortalece a reputação do restaurante.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.3.6 Mapeamento dos Processos</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Mapeamento dos Processos</h4>
                       <p className="text-foreground leading-relaxed">
                         Documentação de todos os processos operacionais: recebimento de mercadorias, armazenamento, pré-preparo, preparo final, montagem de pratos, expedição e limpeza. Processos bem definidos garantem padronização de qualidade e eficiência operacional.
                       </p>
@@ -193,32 +193,32 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.4 Plano Financeiro</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Plano Financeiro</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.4.1 Levantamento de Custos</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Levantamento de Custos</h4>
                       <p className="text-foreground leading-relaxed">
                         Identificação completa de custos fixos (aluguel, energia, água, salários, impostos) e variáveis (alimentos, bebidas, embalagens, delivery). Cálculo do CMV (Custo de Mercadoria Vendida) para cada prato do cardápio, essencial para precificação estratégica.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.4.2 Análise do Investimento Inicial</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise do Investimento Inicial</h4>
                       <p className="text-foreground leading-relaxed">
                         Detalhamento de todos os investimentos necessários para abertura: reforma do espaço, equipamentos de cozinha, mobiliário, utensílios, estoque inicial, capital de giro, licenças e alvarás. Conhecer o investimento total evita surpresas e descapitalização.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.4.3 Projeção da Receita</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Projeção da Receita</h4>
                       <p className="text-foreground leading-relaxed">
                         Estimativa de faturamento mensal baseada em ticket médio, número de atendimentos por dia, taxa de ocupação e sazonalidade. Projeção de três cenários (otimista, moderado e pessimista) para diferentes situações de mercado, permitindo planejamento mais robusto.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.4.4 Cálculo de Indicadores</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Cálculo de Indicadores</h4>
                       <p className="text-foreground leading-relaxed">
                         Cálculo de indicadores financeiros críticos: ponto de equilíbrio (breakeven), payback (prazo de retorno do investimento), margem de contribuição, margem líquida e fluxo de caixa projetado. Esses indicadores são fundamentais para tomada de decisão e gestão financeira eficiente.
                       </p>
@@ -227,18 +227,18 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.5 Plano Estratégico</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Plano Estratégico</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.5.1 Análise SWOT</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Análise SWOT</h4>
                       <p className="text-foreground leading-relaxed">
                         Mapeamento das Forças (Strengths), Fraquezas (Weaknesses), Oportunidades (Opportunities) e Ameaças (Threats) do restaurante. Esta análise estratégica identifica vantagens competitivas a explorar, pontos de melhoria internos, oportunidades de mercado e riscos externos a monitorar.
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.5.2 Plano de Metas</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Plano de Metas</h4>
                       <p className="text-foreground leading-relaxed">
                         Definição de metas estratégicas com base no Balanced Scorecard (BSC), conectando perspectivas financeira, de mercado, processos internos e aprendizado organizacional. Estabelecimento de objetivos mensuráveis e prazos claros para crescimento sustentável do restaurante.
                       </p>
@@ -247,11 +247,11 @@ const Index = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-2xl font-bold text-secondary mb-4">2.6 Análise de Riscos</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-4">Análise de Riscos</h3>
                   
                   <div className="space-y-4 ml-4">
                     <div>
-                      <h4 className="text-lg font-semibold text-dark-blue mb-2">2.6.1 Matriz de Riscos</h4>
+                      <h4 className="text-lg font-semibold text-dark-blue mb-2">Matriz de Riscos</h4>
                       <p className="text-foreground leading-relaxed">
                         Identificação e classificação de riscos específicos do setor gastronômico: riscos operacionais (contaminação de alimentos, problemas com fornecedores), financeiros (variação de custos de insumos), mercadológicos (mudança de preferências dos consumidores) e legais (alterações na legislação sanitária). Para cada risco, são definidas probabilidade de ocorrência, impacto potencial e planos de contingência.
                       </p>
