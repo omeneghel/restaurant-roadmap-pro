@@ -47,6 +47,8 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "dark-blue": "hsl(var(--dark-blue))",
+        "dark-gray": "hsl(var(--dark-gray))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,6 +59,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      fontFamily: {
+        sans: ['Montserrat', 'sans-serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
