@@ -6,10 +6,7 @@ import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
 import ContactForm from "@/components/ContactForm";
 import Breadcrumb from "@/components/Breadcrumb";
-import {
-  Target, Search, Megaphone, Settings,
-  DollarSign, PieChart, Shield, FileText
-} from "lucide-react";
+import { Target, Search, Megaphone, Settings, DollarSign, PieChart, Shield, FileText } from "lucide-react";
 
 type Bullet = { label: string; text: string };
 type Item = { label: string; text: string };
@@ -50,14 +47,22 @@ export default function BusinessPlanPage() {
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
-    const path = `/content/${slug}.json`;
+    const path = `/content/plano-de-negocios/${slug}.json`;
     fetch(path)
-      .then(r => { if (!r.ok) throw new Error(String(r.status)); return r.json(); })
+      .then((r) => {
+        if (!r.ok) throw new Error(String(r.status));
+        return r.json();
+      })
       .then(setData)
       .catch(() => setErr(`Conteúdo não encontrado para ${slug}`));
   }, [slug]);
 
-  if (err) return <div className="container mx-auto px-4 py-16"><h1 className="text-2xl font-bold">{err}</h1></div>;
+  if (err)
+    return (
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-2xl font-bold">{err}</h1>
+      </div>
+    );
   if (!data) return null;
 
   return (
@@ -68,7 +73,7 @@ export default function BusinessPlanPage() {
         <Breadcrumb items={data.breadcrumb} />
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-0">
-            {data.sections.map(s => (
+            {data.sections.map((s) => (
               <Section key={s.id} id={s.id} title={s.title}>
                 {s.paragraphs?.map((p, i) => (
                   <p key={i} className="text-foreground leading-relaxed mb-6" dangerouslySetInnerHTML={{ __html: p }} />
@@ -103,7 +108,12 @@ export default function BusinessPlanPage() {
                 {s.featureCards && (
                   <div className="grid md:grid-cols-2 gap-6 mt-8">
                     {s.featureCards.map((f, i) => (
-                      <FeatureCard key={i} icon={iconMap[f.icon] ?? <FileText size={24} />} title={f.title} description={f.description} />
+                      <FeatureCard
+                        key={i}
+                        icon={iconMap[f.icon] ?? <FileText size={24} />}
+                        title={f.title}
+                        description={f.description}
+                      />
                     ))}
                   </div>
                 )}
@@ -117,7 +127,9 @@ export default function BusinessPlanPage() {
       </div>
       <footer className="bg-secondary text-white py-8 mt-16">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">© {new Date().getFullYear()} ECONOMICA - Empresa Júnior do Instituto de Economia da UNICAMP</p>
+          <p className="text-sm">
+            © {new Date().getFullYear()} ECONOMICA - Empresa Júnior do Instituto de Economia da UNICAMP
+          </p>
           <p className="text-sm mt-2 opacity-75">Atuando há mais de 30 anos no mercado de consultoria empresarial</p>
         </div>
       </footer>
