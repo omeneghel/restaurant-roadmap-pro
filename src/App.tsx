@@ -27,6 +27,7 @@ const App = () => (
       <Routes>
         <Route path="/" element={<Index />} />
         {/* Business Plan Routes - New Structure */}
+        <Route path="/plano-de-negocios/restaurante" element={<BusinessPlanRestaurant />} />
         <Route path="/plano-de-negocios/:slug" element={<BusinessPlanPage />} />
         {/* Rota dinâmica para plano de negócios */}
         <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} /> {/* Essa linha é a nova! */}
