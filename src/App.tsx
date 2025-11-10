@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import BusinessPlan from "./pages/BusinessPlan";
 import BusinessPlanRestaurant from "./pages/BusinessPlanRestaurant";
-import BusinessPlanTemplate from "./pages/BusinessPlanTemplate";
+import BusinessPlanTemplate from "./pages/BusinessPlanTemplate";  // Já tem isso?
 import Services from "./pages/Services";
 import BusinessPlanService from "./pages/BusinessPlanService";
 import MarketResearchService from "./pages/MarketResearchService";
@@ -30,7 +30,9 @@ const App = () => (
         {/* Business Plan Routes - New Structure */}
         <Route path="/plano-de-negocios" element={<BusinessPlan />} />
         <Route path="/plano-de-negocios/restaurante" element={<BusinessPlanRestaurant />} />
-        <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} />
+        
+        {/* Rota dinâmica para plano de negócios */}
+        <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} />  {/* Essa linha é a nova! */}
         
         {/* Old Route - Redirect handled by template */}
         <Route path="/plano-de-negocios-para-restaurante" element={<BusinessPlanRestaurant />} />
