@@ -37,13 +37,6 @@ const App = () => (
         {/* Business Plan Routes - New Structure */}
         <Route path="/plano-de-negocios" element={<BusinessPlan />} />
         <Route path="/plano-de-negocios/restaurante" element={<BusinessPlanRestaurant />} />
-        <Route path="/plano-de-negocios/farmacias" element={<BusinessPlanFarmacias />} />
-        <Route path="/plano-de-negocios/pizzarias" element={<BusinessPlanPizzarias />} />
-        <Route path="/plano-de-negocios/distribuidoras-de-bebidas" element={<BusinessPlanDistribuidorasdeBebidas />} />
-        <Route path="/plano-de-negocios/academias" element={<BusinessPlanAcademias />} />
-        <Route path="/plano-de-negocios/creches" element={<BusinessPlanCreches />} />
-        <Route path="/plano-de-negocios/autoescolas" element={<BusinessPlanAutoescolas />} />
-        <Route path="/plano-de-negocios/spas" element={<BusinessPlanSpas />} />
 
         {/* Rota dinâmica para plano de negócios */}
         <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} />
