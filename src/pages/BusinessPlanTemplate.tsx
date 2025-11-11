@@ -45,21 +45,34 @@ const iconMap: Record<string, JSX.Element> = {
 // Componente genérico que carrega dados do JSON
 function GenericBusinessPlanPage({ slug }: { slug: string }) {
   const [data, setData] = useState<PageData | null>(null);
+  const [loading, setLoading] = useState(true);
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
+    setLoading(true);
     const path = `/content/plano-de-negocios/${slug}.json`;
+
     fetch(path)
       .then((r) => {
         if (!r.ok) throw new Error(String(r.status));
         return r.json();
       })
-      .then(setData)
-      .catch(() => setErr(`Conteúdo não encontrado para ${slug}`));
+      .then((jsonData) => {
+        setData(jsonData);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Erro ao carregar JSON:", error);
+        setErr(`Conteúdo não encontrado para ${slug}`);
+        setLoading(false);
+      });
   }, [slug]);
 
-  if (err) return <Navigate to="/404" replace />;
-  if (!data) return null;
+  // Enquanto carrega, não mostra nada (evita flash de conteúdo)
+  if (loading) return <div className="min-h-screen bg-background"></div>;
+
+  // Se deu erro, redireciona para 404
+  if (err || !data) return <Navigate to="/404" replace />;
 
   return (
     <div className="min-h-screen bg-background">
@@ -79,7 +92,7 @@ function GenericBusinessPlanPage({ slug }: { slug: string }) {
                     {s.bullets.map((b, i) => (
                       <div key={i}>
                         <h3 className="text-xl font-bold text-secondary mb-3">{b.label}</h3>
-                        <p className="text-foreground leading-relaxed">{b.text}</p>
+                        <p className="text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b.text }} />
                       </div>
                     ))}
                   </div>
@@ -93,7 +106,10 @@ function GenericBusinessPlanPage({ slug }: { slug: string }) {
                           {sub.items.map((it, j) => (
                             <div key={j}>
                               <h4 className="text-lg font-semibold text-dark-blue mb-2">{it.label}</h4>
-                              <p className="text-foreground leading-relaxed">{it.text}</p>
+                              <p
+                                className="text-foreground leading-relaxed"
+                                dangerouslySetInnerHTML={{ __html: it.text }}
+                              />
                             </div>
                           ))}
                         </div>
