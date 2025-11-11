@@ -16,6 +16,7 @@ import BusinessPlanAcademias from "./pages/academias";
 import BusinessPlanCreches from "./pages/creches";
 import BusinessPlanAutoescolas from "./pages/autoescolas";
 import BusinessPlanSpas from "./pages/spas";
+import BusinessPlanHamburguerias from "./pages/hamburguerias";
 import MarketResearchService from "./pages/MarketResearchService";
 import ValuationService from "./pages/ValuationService";
 import PricingService from "./pages/PricingService";
@@ -37,6 +38,7 @@ const App = () => (
         {/* Business Plan Routes - New Structure */}
         <Route path="/plano-de-negocios" element={<BusinessPlan />} />
         <Route path="/plano-de-negocios/restaurante" element={<BusinessPlanRestaurant />} />
+        <Route path="/plano-de-negocios/hamburguerias" element={<BusinessPlanHamburguerias />} />
 
         {/* Rota dinâmica para plano de negócios */}
         <Route path="/plano-de-negocios/:slug" element={<BusinessPlanTemplate />} />
