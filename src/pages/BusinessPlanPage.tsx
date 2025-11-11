@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import BusinessPlanRestaurant from "./BusinessPlanRestaurant";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
@@ -41,8 +42,8 @@ const iconMap: Record<string, JSX.Element> = {
   FileText: <FileText size={24} />,
 };
 
-export default function BusinessPlanPage() {
-  const { slug = "" } = useParams();
+// Componente genérico que carrega dados do JSON
+function GenericBusinessPlanPage({ slug }: { slug: string }) {
   const [data, setData] = useState<PageData | null>(null);
   const [err, setErr] = useState<string | null>(null);
 
@@ -57,12 +58,7 @@ export default function BusinessPlanPage() {
       .catch(() => setErr(`Conteúdo não encontrado para ${slug}`));
   }, [slug]);
 
-  if (err)
-    return (
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-2xl font-bold">{err}</h1>
-      </div>
-    );
+  if (err) return <Navigate to="/404" replace />;
   if (!data) return null;
 
   return (
@@ -136,3 +132,23 @@ export default function BusinessPlanPage() {
     </div>
   );
 }
+
+// Template para páginas programáticas de plano de negócios
+const BusinessPlanTemplate = () => {
+  const { slug } = useParams();
+
+  // Se for restaurante, usa o componente específico
+  if (slug === "restaurante") {
+    return <BusinessPlanRestaurant />;
+  }
+
+  // Para outros slugs, usa o componente genérico que carrega o JSON
+  if (slug) {
+    return <GenericBusinessPlanPage slug={slug} />;
+  }
+
+  // Se não houver slug, redireciona para 404
+  return <Navigate to="/404" replace />;
+};
+
+export default BusinessPlanTemplate;
