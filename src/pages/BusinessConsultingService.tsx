@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
-import ContactForm from "@/components/ContactForm";
+import ConsultingContactForm from "@/components/ConsultingContactForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -176,17 +176,17 @@ const BusinessConsultingService = () => {
             ]}
           />
           <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
-            <div>
+            <div className="text-center lg:text-left">
               <div className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm mb-4">
                 Consultoria Empresarial
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
                 Transforme Sua Empresa com Nossa <span className="text-cyan-300">Consultoria Especializada</span>
               </h1>
-              <p className="text-xl mb-6 opacity-90">
+              <p className="text-lg md:text-xl mb-6 opacity-90">
                 A ECONOMICA combina dados, experiência e visão de futuro para uma consultoria <strong>completa e personalizada</strong>.
               </p>
-              <div className="flex flex-wrap gap-4 mb-6">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
                   <span>Diagnóstico Gratuito</span>
@@ -198,12 +198,8 @@ const BusinessConsultingService = () => {
               </div>
             </div>
             
-            <div className="bg-white rounded-lg p-8 text-secondary">
-              <h3 className="text-2xl font-bold mb-2">Diagnóstico Gratuito</h3>
-              <p className="text-muted-foreground mb-6">
-                Receba uma análise personalizada das necessidades da sua empresa
-              </p>
-              <ContactForm />
+            <div className="bg-white rounded-lg p-6 md:p-8 text-secondary">
+              <ConsultingContactForm />
             </div>
           </div>
         </div>
@@ -212,13 +208,13 @@ const BusinessConsultingService = () => {
       {/* Stats Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-primary mb-2">
+                <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
-                <div className="text-muted-foreground">{stat.label}</div>
+                <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -237,10 +233,10 @@ const BusinessConsultingService = () => {
             <div className="inline-block bg-secondary/10 text-secondary px-4 py-1 rounded-full text-sm mb-4">
               Nossos Diferenciais
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4">
               Por que escolher a ECONOMICA?
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
               Para pequenas, médias e grandes empresas, temos a fórmula que combina excelência acadêmica e experiência mercadológica
             </p>
           </div>
@@ -249,8 +245,8 @@ const BusinessConsultingService = () => {
             {differentials.map((differential, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-secondary mb-3">{differential.title}</h3>
-                  <p className="text-muted-foreground">{differential.description}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-secondary mb-3">{differential.title}</h3>
+                  <p className="text-sm md:text-base text-muted-foreground">{differential.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -261,7 +257,7 @@ const BusinessConsultingService = () => {
       {/* Clients Section */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary text-center mb-8">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary text-center mb-8 px-4">
             Nossos clientes de sucesso: <br className="hidden md:block" />empresas que evoluíram conosco
           </h2>
           <div className="text-center">
@@ -276,44 +272,44 @@ const BusinessConsultingService = () => {
       <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4">
               Nossos Serviços
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Soluções Completas para sua Empresa
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-2">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mt-2 px-4">
               Oferecemos um portfólio abrangente de serviços para impulsionar o crescimento e sucesso do seu negócio.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 max-w-6xl mx-auto">
             {services.map((service, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+                <CardContent className="p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                       {service.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-secondary">{service.title}</h3>
+                    <h3 className="text-xl md:text-2xl font-bold text-secondary text-center md:text-left">{service.title}</h3>
                   </div>
                   
-                  <div className="space-y-4">
+                  <div className="space-y-4 text-center md:text-left">
                     <div>
                       <h4 className="font-bold text-red-600 mb-2">Problema</h4>
-                      <p className="text-muted-foreground">{service.problem}</p>
+                      <p className="text-sm md:text-base text-muted-foreground">{service.problem}</p>
                     </div>
                     
                     <div>
                       <h4 className="font-bold text-secondary mb-2">Nossa Solução</h4>
-                      <p className="text-muted-foreground">{service.solution}</p>
+                      <p className="text-sm md:text-base text-muted-foreground">{service.solution}</p>
                     </div>
                     
                     <div>
                       <h4 className="font-bold text-green-600 mb-2">Benefícios</h4>
                       <ul className="space-y-1">
                         {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                          <li key={idx} className="flex items-start gap-2 text-muted-foreground text-sm md:text-base">
                             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                             <span>{benefit}</span>
                           </li>
@@ -330,16 +326,6 @@ const BusinessConsultingService = () => {
             ))}
           </div>
 
-          <Card className="mt-12 bg-gradient-to-r from-secondary to-dark-blue text-white border-0">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-2xl font-bold mb-4">Projeto Personalizado?</h3>
-              <p className="text-lg mb-6 opacity-90">Conte-nos suas necessidades específicas</p>
-              <Button size="lg" variant="secondary">
-                <a href="#form">Fale Conosco</a>
-              </Button>
-            </CardContent>
-          </Card>
-
           <div className="text-center mt-8">
             <Button size="lg" asChild>
               <a href="#form">Fale Agora com um Consultor</a>
@@ -352,13 +338,13 @@ const BusinessConsultingService = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4">
               Nosso Processo
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
               Como Trabalhamos
             </p>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mt-2">
+            <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto mt-2 px-4">
               Um processo estruturado e transparente que garante os melhores resultados para sua empresa
             </p>
           </div>
@@ -367,19 +353,19 @@ const BusinessConsultingService = () => {
             {process.map((step, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="p-6">
-                  <div className="flex gap-6">
-                    <div className="flex-shrink-0">
+                  <div className="flex flex-col md:flex-row gap-6 text-center md:text-left">
+                    <div className="flex-shrink-0 mx-auto md:mx-0">
                       <div className="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold">
                         {step.number}
                       </div>
                     </div>
                     <div className="flex-1">
                       <div className="mb-2">
-                        <h3 className="text-2xl font-bold text-secondary inline">{step.title}</h3>
-                        <span className="text-lg text-muted-foreground ml-2">{step.subtitle}</span>
+                        <h3 className="text-xl md:text-2xl font-bold text-secondary inline">{step.title}</h3>
+                        <span className="text-base md:text-lg text-muted-foreground ml-2">{step.subtitle}</span>
                       </div>
-                      <p className="text-lg font-semibold text-secondary mb-2">{step.description}</p>
-                      <p className="text-muted-foreground">{step.detail}</p>
+                      <p className="text-base md:text-lg font-semibold text-secondary mb-2">{step.description}</p>
+                      <p className="text-sm md:text-base text-muted-foreground">{step.detail}</p>
                     </div>
                   </div>
                 </CardContent>
@@ -392,16 +378,16 @@ const BusinessConsultingService = () => {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-primary to-secondary text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 px-4">
             Pronto para Transformar seu Negócio?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
+          <p className="text-base md:text-lg lg:text-xl mb-8 max-w-2xl mx-auto opacity-90 px-4">
             Agende um diagnóstico sem custos e descubra como a ECONOMICA pode impulsionar o crescimento do seu negócio.
           </p>
-          <Button size="lg" variant="secondary" className="text-lg mb-6">
+          <Button size="lg" variant="secondary" className="mb-6">
             <a href="#form">Receber Diagnóstico Gratuito</a>
           </Button>
-          <p className="text-sm opacity-75">
+          <p className="text-xs md:text-sm opacity-75 px-4">
             Resposta em até 24 horas • Sem compromisso • Totalmente gratuito
           </p>
         </div>
@@ -411,10 +397,10 @@ const BusinessConsultingService = () => {
       <section id="faq" className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4 px-4">
               Perguntas Frequentes
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base md:text-lg text-muted-foreground px-4">
               Tire suas dúvidas sobre nossos serviços de consultoria
             </p>
           </div>
@@ -423,10 +409,10 @@ const BusinessConsultingService = () => {
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left text-lg font-semibold">
+                  <AccordionTrigger className="text-left text-base md:text-lg font-semibold px-4">
                     {faq.question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground text-base">
+                  <AccordionContent className="text-muted-foreground text-sm md:text-base px-4">
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
@@ -441,18 +427,14 @@ const BusinessConsultingService = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4 px-4">
                 Solicite seu Diagnóstico Gratuito
               </h2>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base md:text-lg text-muted-foreground px-4">
                 Preencha o formulário e nossa equipe entrará em contato em até 24 horas
               </p>
             </div>
-            <Card>
-              <CardContent className="p-8">
-                <ContactForm />
-              </CardContent>
-            </Card>
+            <ConsultingContactForm />
           </div>
         </div>
       </section>
