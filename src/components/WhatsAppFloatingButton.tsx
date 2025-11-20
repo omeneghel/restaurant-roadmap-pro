@@ -76,10 +76,17 @@ const WhatsAppFloatingButton = () => {
         description: "Seus dados foram enviados. Redirecionando para o WhatsApp...",
       });
 
-      // Disparar evento no Google Tag Manager
+      // Disparar evento no Google Tag Manager com dados do formulário
       (window as any).dataLayer = (window as any).dataLayer || [];
       (window as any).dataLayer.push({
-        event: 'form_sent'
+        event: 'form_sent',
+        form_data: {
+          nome: formData.nome,
+          email: formData.email,
+          telefone: formData.telefone,
+          necessidade: formData.necessidade,
+          ...urlParams
+        }
       });
 
       // Redirecionar para WhatsApp
