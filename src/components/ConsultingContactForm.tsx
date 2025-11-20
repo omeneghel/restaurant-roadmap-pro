@@ -16,10 +16,28 @@ const ConsultingContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Disparar evento no Google Tag Manager
+    // Capturar parâmetros da URL
+    const params = new URLSearchParams(window.location.search);
+    const urlParams = {
+      page_url: window.location.href,
+      utm_source: params.get("utm_source") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_term: params.get("utm_term") || "",
+      gclid: params.get("gclid") || "",
+      fbc: params.get("fbc") || "",
+    };
+    
+    // Disparar evento no Google Tag Manager com dados do formulário
     (window as any).dataLayer = (window as any).dataLayer || [];
     (window as any).dataLayer.push({
-      event: 'form_sent'
+      event: 'form_sent',
+      form_data: {
+        nome: formData.nome,
+        email: formData.email,
+        telefone: formData.telefone,
+        mensagem: formData.mensagem,
+        ...urlParams
+      }
     });
     
     toast.success("Solicitação enviada com sucesso! Entraremos em contato em breve.");
