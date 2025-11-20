@@ -32,10 +32,10 @@ const ConsultingContactForm = () => {
     (window as any).dataLayer.push({
       event: 'form_sent',
       form_data: {
-        nome: formData.nome,
+        name: formData.nome,
         email: formData.email,
-        telefone: formData.telefone,
-        mensagem: formData.mensagem,
+        phone: formData.telefone,
+        message: formData.mensagem,
         ...urlParams
       }
     });

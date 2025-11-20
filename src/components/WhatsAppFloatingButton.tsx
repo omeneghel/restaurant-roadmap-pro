@@ -81,10 +81,10 @@ const WhatsAppFloatingButton = () => {
       (window as any).dataLayer.push({
         event: 'form_sent',
         form_data: {
-          nome: formData.nome,
+          name: formData.nome,
           email: formData.email,
-          telefone: formData.telefone,
-          necessidade: formData.necessidade,
+          phone: formData.telefone,
+          need: formData.necessidade,
           ...urlParams
         }
       });
