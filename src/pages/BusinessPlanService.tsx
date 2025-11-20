@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import BusinessPlanContactForm from "@/components/BusinessPlanContactForm";
 import SEOHead from "@/components/SEOHead";
+import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -427,6 +428,7 @@ const BusinessPlanService = () => {
       </section>
 
       <Footer />
+      <WhatsAppFloatingButton />
     </div>
   );
 };
