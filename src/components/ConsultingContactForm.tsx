@@ -15,6 +15,13 @@ const ConsultingContactForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Disparar evento no Google Tag Manager
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    (window as any).dataLayer.push({
+      event: 'form_sent'
+    });
+    
     toast.success("Solicitação enviada com sucesso! Entraremos em contato em breve.");
     setFormData({ nome: "", email: "", telefone: "", mensagem: "" });
   };
