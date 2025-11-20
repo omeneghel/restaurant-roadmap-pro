@@ -73,6 +73,12 @@ const BusinessPlanContactForm = () => {
         description: "Seus dados foram enviados. Redirecionando para o WhatsApp...",
       });
 
+      // Disparar evento no Google Tag Manager
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({
+        event: 'form_sent'
+      });
+
       setTimeout(() => {
         const phoneNumber = "5519956909147";
         const message = encodeURIComponent(
