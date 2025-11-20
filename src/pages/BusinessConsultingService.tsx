@@ -5,9 +5,17 @@ import ConsultingContactForm from "@/components/ConsultingContactForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Briefcase, Target, TrendingUp, DollarSign, BarChart3, FileText, CheckCircle2, Award, Users, TrendingDown } from "lucide-react";
+import { Briefcase, Target, TrendingUp, DollarSign, BarChart3, FileText, CheckCircle2, Award, Users, TrendingDown, GraduationCap } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 import { Link } from "react-router-dom";
+import cleanMedical from "@/assets/clients/clean-medical.png";
+import refriplay from "@/assets/clients/refriplay.png";
+import uliving from "@/assets/clients/uliving.png";
+import cliente4 from "@/assets/clients/cliente4.png";
+import cliente5 from "@/assets/clients/cliente5.png";
+import fejesp from "@/assets/clients/fejesp.png";
+import bosch from "@/assets/clients/bosch.png";
+import tetrapak from "@/assets/clients/tetrapak.png";
 
 const BusinessConsultingService = () => {
   const stats = [
@@ -19,18 +27,22 @@ const BusinessConsultingService = () => {
 
   const differentials = [
     {
+      icon: <GraduationCap className="w-12 h-12 text-primary" />,
       title: "Qualidade Acadêmica",
       description: "Respaldo da UNICAMP com metodologias atualizadas e rigor científico"
     },
     {
+      icon: <TrendingUp className="w-12 h-12 text-primary" />,
       title: "Preço Acessível",
       description: "Custos até 30% menores que outras consultorias tradicionais"
     },
     {
+      icon: <Target className="w-12 h-12 text-primary" />,
       title: "Soluções Personalizadas",
       description: "Projetos adaptados às necessidades específicas da sua empresa"
     },
     {
+      icon: <Briefcase className="w-12 h-12 text-primary" />,
       title: "Portfólio Completo",
       description: "Portfólio amplo e validado por clientes de diferentes setores do mercado"
     }
@@ -167,7 +179,7 @@ const BusinessConsultingService = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-20">
+      <section className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="container mx-auto px-4">
           <Breadcrumb 
             items={[
@@ -176,30 +188,30 @@ const BusinessConsultingService = () => {
               { label: "Consultoria Empresarial" }
             ]}
           />
-          <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8">
             <div className="text-center lg:text-left">
-              <div className="inline-block bg-white/20 text-white px-4 py-1 rounded-full text-sm mb-4">
+              <div className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs md:text-sm mb-4">
                 Consultoria Empresarial
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight break-words">
                 Transforme Sua Empresa com Nossa <span className="text-cyan-300">Consultoria Especializada</span>
               </h1>
-              <p className="text-lg md:text-xl mb-6 opacity-90">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 md:mb-6 opacity-90 break-words">
                 A ECONOMICA combina dados, experiência e visão de futuro para uma consultoria <strong>completa e personalizada</strong>.
               </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-6">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 mb-4 md:mb-6">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>Diagnóstico Gratuito</span>
+                  <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+                  <span className="text-sm md:text-base">Diagnóstico Gratuito</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" />
-                  <span>Consultores Online</span>
+                  <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+                  <span className="text-sm md:text-base">Consultores Online</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white rounded-lg p-6 md:p-8 text-secondary">
+            <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 text-secondary w-full max-w-md mx-auto lg:max-w-none">
               <ConsultingContactForm />
             </div>
           </div>
@@ -245,7 +257,10 @@ const BusinessConsultingService = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {differentials.map((differential, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
-                <CardContent className="p-6 text-center">
+                <CardContent className="p-6 text-center flex flex-col items-center">
+                  <div className="mb-4">
+                    {differential.icon}
+                  </div>
                   <h3 className="text-lg md:text-xl font-bold text-secondary mb-3">{differential.title}</h3>
                   <p className="text-sm md:text-base text-muted-foreground">{differential.description}</p>
                 </CardContent>
@@ -261,6 +276,34 @@ const BusinessConsultingService = () => {
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary text-center mb-8 px-4">
             Nossos clientes de sucesso: <br className="hidden md:block" />empresas que evoluíram conosco
           </h2>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto mb-8">
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={cleanMedical} alt="Clean Medical" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={refriplay} alt="Refriplay" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={uliving} alt="Uliving" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={cliente4} alt="Cliente" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={cliente5} alt="Cliente" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={fejesp} alt="FEJESP" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={bosch} alt="Bosch" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+            <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-lg transition-shadow">
+              <img src={tetrapak} alt="Tetra Pak" className="max-h-16 md:max-h-20 w-auto object-contain" />
+            </div>
+          </div>
+          
           <div className="text-center">
             <Button asChild>
               <a href="#form">Agendar Diagnóstico</a>
@@ -288,7 +331,7 @@ const BusinessConsultingService = () => {
             {services.map((service, index) => (
               <Card key={index} className="border-2 hover:border-primary transition-all duration-300">
                 <CardContent className="p-6 md:p-8">
-                  <div className="flex flex-col md:flex-row items-start md:items-center gap-4 mb-6">
+                  <div className="flex flex-col items-center md:items-start md:flex-row gap-4 mb-6">
                     <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
                       {service.icon}
                     </div>
