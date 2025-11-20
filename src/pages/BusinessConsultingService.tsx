@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
 import ConsultingContactForm from "@/components/ConsultingContactForm";
 import { Button } from "@/components/ui/button";
@@ -439,11 +440,7 @@ const BusinessConsultingService = () => {
         </div>
       </section>
 
-      <footer className="bg-secondary text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} ECONOMICA. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
