@@ -100,12 +100,12 @@ const BusinessPlanContactForm = () => {
   };
 
   return (
-    <Card className="w-full shadow-lg">
-      <CardContent className="p-6">
-        <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-center mb-6 text-secondary">
+    <Card className="w-full shadow-lg max-w-full">
+      <CardContent className="p-4 sm:p-6">
+        <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-center mb-4 sm:mb-6 text-secondary">
           Solicite Seu Plano de Negócios
         </h3>
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
           <Input
             type="text"
             value={formData.nome}
@@ -141,7 +141,7 @@ const BusinessPlanContactForm = () => {
           />
           <Button
             type="submit"
-            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-6"
+            className="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 sm:py-6 text-xs sm:text-sm whitespace-normal leading-tight"
             disabled={loading}
           >
             {loading ? "ENVIANDO..." : "SOLICITAR PLANO DE NEGÓCIOS"}
