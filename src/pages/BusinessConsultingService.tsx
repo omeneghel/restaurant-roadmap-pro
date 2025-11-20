@@ -179,8 +179,8 @@ const BusinessConsultingService = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16 lg:py-20 overflow-hidden">
-        <div className="container mx-auto px-4">
+      <section className="bg-gradient-to-r from-primary to-secondary text-white py-12 md:py-16 lg:py-20">
+        <div className="container mx-auto px-3 sm:px-4 md:px-6">
           <Breadcrumb 
             items={[
               { label: "Home", href: "/" },
@@ -188,31 +188,33 @@ const BusinessConsultingService = () => {
               { label: "Consultoria Empresarial" }
             ]}
           />
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mt-8">
-            <div className="text-center lg:text-left">
-              <div className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs md:text-sm mb-4">
+          <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-start mt-6 md:mt-8">
+            <div className="text-center lg:text-left px-2">
+              <div className="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-xs md:text-sm mb-3 md:mb-4">
                 Consultoria Empresarial
               </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 leading-tight break-words">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 md:mb-4 lg:mb-6 leading-tight">
                 Transforme Sua Empresa com Nossa <span className="text-cyan-300">Consultoria Especializada</span>
               </h1>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-4 md:mb-6 opacity-90 break-words">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-3 md:mb-4 lg:mb-6 opacity-90">
                 A ECONOMICA combina dados, experiência e visão de futuro para uma consultoria <strong>completa e personalizada</strong>.
               </p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 mb-4 md:mb-6">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 lg:gap-4 mb-3 md:mb-4 lg:mb-6">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-                  <span className="text-sm md:text-base">Diagnóstico Gratuito</span>
+                  <span className="text-xs sm:text-sm md:text-base">Diagnóstico Gratuito</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-                  <span className="text-sm md:text-base">Consultores Online</span>
+                  <span className="text-xs sm:text-sm md:text-base">Consultores Online</span>
                 </div>
               </div>
             </div>
             
-            <div className="bg-white rounded-lg p-4 sm:p-6 md:p-8 text-secondary w-full max-w-md mx-auto lg:max-w-none">
-              <ConsultingContactForm />
+            <div className="w-full flex justify-center lg:justify-end px-2">
+              <div className="w-full max-w-sm lg:max-w-md">
+                <ConsultingContactForm />
+              </div>
             </div>
           </div>
         </div>
