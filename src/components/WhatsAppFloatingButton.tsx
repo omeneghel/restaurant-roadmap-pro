@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { X, MessageCircle } from "lucide-react";
 import whatsappIcon from "@/assets/whatsapp-icon.png";
 
 const WhatsAppFloatingButton = () => {
@@ -109,62 +109,58 @@ const WhatsAppFloatingButton = () => {
       </button>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="sm:max-w-md">
-          <DialogHeader>
-            <DialogTitle className="text-center text-2xl font-bold text-secondary">
-              Fale Conosco pelo WhatsApp
-            </DialogTitle>
-          </DialogHeader>
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <Label htmlFor="nome">Nome *</Label>
-              <Input
-                id="nome"
-                value={formData.nome}
-                onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
-                placeholder="Seu nome completo"
-                required
-              />
-            </div>
-            <div>
-              <Label htmlFor="email">Email *</Label>
-              <Input
-                id="email"
-                type="email"
-                value={formData.email}
-                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                placeholder="seu@email.com"
-                required
-              />
-            </div>
-            <div>
-              <Label htmlFor="telefone">Telefone *</Label>
-              <Input
-                id="telefone"
-                value={formData.telefone}
-                onChange={handlePhoneChange}
-                placeholder="(00) 00000-0000"
-                maxLength={15}
-                required
-              />
-            </div>
-            <div>
-              <Label htmlFor="necessidade">Necessidade *</Label>
-              <Textarea
-                id="necessidade"
-                value={formData.necessidade}
-                onChange={(e) => setFormData({ ...formData, necessidade: e.target.value })}
-                placeholder="Descreva brevemente sua necessidade"
-                rows={3}
-                required
-              />
-            </div>
+        <DialogContent className="sm:max-w-md p-0 gap-0 overflow-hidden">
+          <div className="bg-[#2d5f5d] text-white px-6 py-4 flex items-center justify-between">
+            <h2 className="text-lg font-semibold flex items-center gap-2">
+              Olá! Fale conosco via WhatsApp
+            </h2>
+            <button
+              onClick={() => setOpen(false)}
+              className="text-white hover:opacity-80 transition-opacity"
+              aria-label="Fechar"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+          <form onSubmit={handleSubmit} className="p-6 space-y-3 bg-[#f5f5f5]">
+            <Input
+              value={formData.nome}
+              onChange={(e) => setFormData({ ...formData, nome: e.target.value })}
+              placeholder="Nome"
+              className="bg-white border-gray-300"
+              required
+            />
+            <Input
+              type="email"
+              value={formData.email}
+              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              placeholder="Email"
+              className="bg-white border-gray-300"
+              required
+            />
+            <Input
+              value={formData.telefone}
+              onChange={handlePhoneChange}
+              placeholder="Telefone"
+              className="bg-white border-gray-300"
+              maxLength={15}
+              required
+            />
+            <Textarea
+              value={formData.necessidade}
+              onChange={(e) => setFormData({ ...formData, necessidade: e.target.value })}
+              placeholder="Necessidade"
+              className="bg-white border-gray-300 resize-none"
+              rows={3}
+              required
+            />
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-white font-bold"
+              className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-semibold py-6 text-base flex items-center justify-center gap-2"
               disabled={loading}
             >
-              {loading ? "Enviando..." : "Enviar e Abrir WhatsApp"}
+              <MessageCircle className="w-5 h-5" />
+              {loading ? "Enviando..." : "Falar com Especialista"}
             </Button>
           </form>
         </DialogContent>
