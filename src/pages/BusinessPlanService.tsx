@@ -60,22 +60,24 @@ const BusinessPlanService = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-              <div className="space-y-4 sm:space-y-6">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight break-words text-white">
+              <div className="space-y-4 sm:space-y-6 text-center lg:text-left">
+                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-white">
                   Tenha o Seu Plano de Negócios Feito por consultores da UNICAMP
                 </h1>
-                <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed break-words">
+                <p className="text-base sm:text-lg md:text-xl opacity-90 leading-relaxed">
                   A ECONOMICA tem mais de 30 anos de experiência e vai te ajudar a aprimorar o seu negócio, seja ele grande, pequeno, ou ainda só uma ideia!
                 </p>
-                <Button 
-                  onClick={scrollToForm}
-                  size="lg" 
-                  className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 font-bold text-sm sm:text-base md:text-lg px-6 py-3 sm:px-8 sm:py-4"
-                >
-                  AGENDAR DIAGNÓSTICO GRATUITO
-                </Button>
+                <div className="flex justify-center lg:justify-start">
+                  <Button 
+                    onClick={scrollToForm}
+                    size="lg" 
+                    className="w-full sm:w-auto bg-white text-primary hover:bg-white/90 font-bold text-sm sm:text-base px-6 py-3 sm:px-8 sm:py-6 whitespace-normal sm:whitespace-nowrap"
+                  >
+                    AGENDAR DIAGNÓSTICO GRATUITO
+                  </Button>
+                </div>
               </div>
-              <div className="w-full max-w-sm lg:max-w-md mx-auto">
+              <div className="w-full max-w-sm mx-auto lg:max-w-md">
                 <BusinessPlanContactForm />
               </div>
             </div>
@@ -136,7 +138,7 @@ const BusinessPlanService = () => {
             <Button 
               onClick={scrollToForm}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold"
+              className="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 sm:px-8 sm:py-6 text-sm sm:text-base whitespace-normal sm:whitespace-nowrap"
             >
               AGENDAR DIAGNÓSTICO GRATUITO
             </Button>
@@ -256,7 +258,7 @@ const BusinessPlanService = () => {
             <Button 
               onClick={scrollToForm}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold"
+              className="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 sm:px-8 sm:py-6 text-sm sm:text-base whitespace-normal sm:whitespace-nowrap"
             >
               AGENDAR DIAGNÓSTICO GRATUITO
             </Button>
@@ -355,7 +357,7 @@ const BusinessPlanService = () => {
             <Button 
               onClick={scrollToForm}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold"
+              className="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 sm:px-8 sm:py-6 text-sm sm:text-base whitespace-normal sm:whitespace-nowrap"
             >
               AGENDAR DIAGNÓSTICO GRATUITO
             </Button>
@@ -387,7 +389,7 @@ const BusinessPlanService = () => {
             <Button 
               onClick={scrollToForm}
               size="lg" 
-              className="bg-primary hover:bg-primary/90 text-white font-bold"
+              className="bg-primary hover:bg-primary/90 text-white font-bold px-6 py-3 sm:px-8 sm:py-6 text-sm sm:text-base whitespace-normal sm:whitespace-nowrap"
             >
               AGENDAR DIAGNÓSTICO GRATUITO
             </Button>
