@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, BarChart3, TrendingUp, Calculator, Target, Users } from "lucide-react";
+import { FileText, BarChart3, TrendingUp, Calculator, Target, Users, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -35,6 +35,12 @@ const Index = () => {
       title: "Análise de Viabilidade",
       description: "Avalie a viabilidade econômica do seu investimento",
       href: "/servicos/analise-de-viabilidade-do-investimento"
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "Consultoria Empresarial",
+      description: "Consultoria estratégica personalizada para o seu negócio",
+      href: "/servicos/consultoria-empresarial"
     }
   ];
 

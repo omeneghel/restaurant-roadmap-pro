@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, BarChart3, TrendingUp, Calculator, Target } from "lucide-react";
+import { FileText, BarChart3, TrendingUp, Calculator, Target, Briefcase } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Services = () => {
@@ -35,6 +35,12 @@ const Services = () => {
       title: "Análise de Viabilidade do Investimento",
       description: "Avalie a viabilidade econômica e financeira do seu investimento antes de comprometer recursos",
       href: "/servicos/analise-de-viabilidade-do-investimento"
+    },
+    {
+      icon: <Briefcase className="w-8 h-8" />,
+      title: "Consultoria Empresarial",
+      description: "Consultoria estratégica personalizada para impulsionar o crescimento e competitividade do seu negócio",
+      href: "/servicos/consultoria-empresarial"
     }
   ];
 
