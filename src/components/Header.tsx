@@ -9,7 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import { FileText, BarChart3, TrendingUp, Calculator, Target } from "lucide-react";
+import { FileText, BarChart3, TrendingUp, Calculator, Target, Briefcase } from "lucide-react";
 
 const Header = () => {
   const services = [
@@ -42,6 +42,12 @@ const Header = () => {
       title: "Análise de Viabilidade",
       href: "/servicos/analise-de-viabilidade-do-investimento",
       description: "Avalie a viabilidade do investimento"
+    },
+    {
+      icon: <Briefcase className="w-5 h-5" />,
+      title: "Consultoria Empresarial",
+      href: "/servicos/consultoria-empresarial",
+      description: "Consultoria estratégica para o seu negócio"
     }
   ];
 

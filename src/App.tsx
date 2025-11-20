@@ -9,15 +9,9 @@ import BusinessPlanRestaurant from "./pages/BusinessPlanRestaurant";
 import BusinessPlanTemplate from "./pages/BusinessPlanTemplate";
 import Services from "./pages/Services";
 import BusinessPlanService from "./pages/BusinessPlanService";
-import BusinessPlanFarmacias from "./pages/farmacias";
-import BusinessPlanPizzarias from "./pages/pizzarias";
-import BusinessPlanDistribuidorasdeBebidas from "./pages/distribuidoras-de-bebidas";
-import BusinessPlanAcademias from "./pages/academias";
-import BusinessPlanCreches from "./pages/creches";
-import BusinessPlanAutoescolas from "./pages/autoescolas";
-import BusinessPlanSpas from "./pages/spas";
 import BusinessPlanHamburguerias from "./pages/hamburguerias";
 import MarketResearchService from "./pages/MarketResearchService";
+import BusinessConsultingService from "./pages/BusinessConsultingService";
 import ValuationService from "./pages/ValuationService";
 import PricingService from "./pages/PricingService";
 import InvestmentAnalysisService from "./pages/InvestmentAnalysisService";
@@ -53,6 +47,7 @@ const App = () => (
         <Route path="/servicos/valuation" element={<ValuationService />} />
         <Route path="/servicos/precificacao" element={<PricingService />} />
         <Route path="/servicos/analise-de-viabilidade-do-investimento" element={<InvestmentAnalysisService />} />
+        <Route path="/servicos/consultoria-empresarial" element={<BusinessConsultingService />} />
 
         {/* Other Pages */}
         <Route path="/sobre-nos" element={<About />} />
