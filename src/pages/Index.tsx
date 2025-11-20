@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { FileText, BarChart3, TrendingUp, Calculator, Target, Users, Briefcase } from "lucide-react";
@@ -221,12 +222,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-white py-8">
-        <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} ECONOMICA. Todos os direitos reservados.</p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };

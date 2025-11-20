@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
 import FeatureCard from "@/components/FeatureCard";
@@ -340,17 +341,7 @@ const BusinessPlanRestaurant = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-secondary text-white py-8 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">
-            © {new Date().getFullYear()} ECONOMICA - Empresa Júnior do Instituto de Economia da UNICAMP
-          </p>
-          <p className="text-sm mt-2 opacity-75">
-            Atuando há mais de 30 anos no mercado de consultoria empresarial
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
